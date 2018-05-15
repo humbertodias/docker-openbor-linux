@@ -27,3 +27,10 @@ cd $(pwd)/shared/OpenBOR
 ```
 
 ![](doc/openbor.png)
+
+
+# References
+
+* [OpeBOR repository](https://github.com/DCurrent/openbor)
+
+* [Retro Gamer Advanture](http://www.zvitor.com.br/projeto/rga.html)
