@@ -26,4 +26,4 @@ cd $(pwd)/shared/OpenBOR
 ./OpenBOR
 ```
 
-!()[doc/openbor.png]
+![doc/openbor.png]()
