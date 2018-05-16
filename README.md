@@ -1,19 +1,25 @@
 # OpenBOR-linux
 
 
-# Build
+# Build & Make
 
 ```
 docker build . -t openbor-linux
-```
-
-# Run
-
-```
 docker run -ti -v $(pwd)/shared:/shared openbor-linux
 ```
 
-# Demo
+ELF Generated file
+
+```
+file shared/OpenBOR/OpenBOR
+```
+
+```
+shared/OpenBOR/OpenBOR: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=1712d2f64eca30dd92ed4e58112502199c4985b9, stripped
+```
+
+
+# Download Demo
 
 ```
 docker run -ti -v $(pwd)/shared:/shared openbor-linux demo.sh
@@ -28,9 +34,11 @@ cd $(pwd)/shared/OpenBOR
 
 ![](doc/openbor.png)
 
+![](doc/playing.png)
+
 
 # References
 
-* [OpeBOR repository](https://github.com/DCurrent/openbor)
+* [OpenBOR repository](https://github.com/DCurrent/openbor)
 
 * [Retro Gamer Advanture](http://www.zvitor.com.br/projeto/rga.html)
