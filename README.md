@@ -34,6 +34,8 @@ cd $(pwd)/shared/OpenBOR
 
 ![](doc/openbor.png)
 
+![](doc/start.png)
+
 ![](doc/playing.png)
 
 
