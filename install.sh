@@ -1,0 +1,1 @@
+apt update && apt install binutils libsdl2-dev libsdl2-gfx-dev libvpx-dev libpng-dev libvorbis-dev curl unrar -y

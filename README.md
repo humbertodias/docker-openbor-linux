@@ -1,6 +1,10 @@
 # OpenBOR-linux
 
 
+# PreRequirements
+
+* docker
+
 # Build & Make
 
 ```

@@ -1,7 +1,8 @@
 FROM ubuntu:18.04
 
 # root
-RUN apt update && apt install binutils libsdl2-dev libsdl2-gfx-dev libvpx-dev libpng-dev libvorbis-dev curl unrar -y
+ADD install.sh /bin
+RUN /bin/install.sh
 
 RUN apt install language-pack-en -y
 ENV LANGUAGE=en_US.UTF-8
