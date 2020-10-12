@@ -1,7 +1,7 @@
 # OpenBOR-linux
 
 
-# PreRequirements
+# Requirements
 
 * docker
 
@@ -26,10 +26,14 @@ shared/OpenBOR/OpenBOR: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), 
 # Download Demo
 
 ```
-docker run -ti -v $(pwd)/shared:/shared openbor-linux demo.sh
+docker run -ti -v $(pwd)/shared:/shared openbor-linux
+download-demo
+exit
 ```
 
 # Play
+
+Outside of container
 
 ```
 cd $(pwd)/shared/OpenBOR
@@ -41,6 +45,17 @@ cd $(pwd)/shared/OpenBOR
 ![](doc/start.png)
 
 ![](doc/playing.png)
+
+
+Troubleshoot
+
+```
+./OpenBOR: error while loading shared libraries: libvpx.so.5: cannot open shared object file: No such file or directory
+```
+Solution
+```
+sudo ln -s /usr/lib/x86_64-linux-gnu/libvpx.so.6 /usr/lib/x86_64-linux-gnu/libvpx.so.5
+```
 
 
 # References
