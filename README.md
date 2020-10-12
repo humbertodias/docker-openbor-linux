@@ -52,9 +52,11 @@ Or vnc/spice
 ```
 make run
 ```
+![](doc/spice-password.png)
 
 The password is `password`
 
+![](doc/spice-viewer.png)
 
 # References
 
