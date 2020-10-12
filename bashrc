@@ -7,14 +7,18 @@ function openbor-copy(){
 openbor-copy
 
 function download-demo(){
-    curl -LOk http://www.zvitor.com.br/Downloads/RGAv103.rar
-    unrar e RGAv103.rar i "*RGA.pak"
-    mv RGA.pak /shared/OpenBOR/Paks
-    rm RGAv103.rar
-    cd /shared/OpenBOR
+    PAK_FILE=/shared/OpenBOR/Paks/RGA.pak
+    if [ -f "/shared/OpenBOR/Paks/RGA.pak" ]; then
+        echo "Pak $PAK_FILE already downloaded"
+    else
+        curl -LOk http://www.zvitor.com.br/Downloads/RGAv103.rar
+        unrar e RGAv103.rar i "*RGA.pak"
+        mv RGA.pak /shared/OpenBOR/Paks
+        rm RGAv103.rar
+    fi
 }
 
-export -f openbor-copy openbor-demo
+export -f openbor-copy download-demo
 
 alias ll='ls -lha --color'
 

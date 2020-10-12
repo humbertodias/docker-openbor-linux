@@ -8,7 +8,7 @@
 # Build & Make
 
 ```
-docker build . -t openbor-linux
+make build
 docker run -ti -v $(pwd)/shared:/shared openbor-linux
 ```
 
@@ -47,15 +47,13 @@ cd $(pwd)/shared/OpenBOR
 ![](doc/playing.png)
 
 
-Troubleshoot
+Or vnc/spice
 
 ```
-./OpenBOR: error while loading shared libraries: libvpx.so.5: cannot open shared object file: No such file or directory
+make run
 ```
-Solution
-```
-sudo ln -s /usr/lib/x86_64-linux-gnu/libvpx.so.6 /usr/lib/x86_64-linux-gnu/libvpx.so.5
-```
+
+The password is `password`
 
 
 # References
