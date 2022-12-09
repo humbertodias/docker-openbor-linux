@@ -7,13 +7,13 @@ remote:
 run-spice:
 	docker run --rm --name openbor \
 	-p 5900:5900 \
-	-v $(PWD)/shared:/shared \
+	-v $(PWD)/shared:/home/openbor/shared \
 	-v /run/user/1000/pulse:/run/user/1000/pulse \
 	openbor-linux
 
 exec-openbor:
 	docker exec -ti openbor \
-	bash -c "cd /shared/OpenBOR && ./OpenBOR"
+	bash -c "cd /home/openbor/shared/OpenBOR && ./OpenBOR*"
 
 run: 
 	$(MAKE) run-spice &
