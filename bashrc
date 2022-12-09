@@ -11,10 +11,8 @@ function download-demo(){
     if [ -f "/shared/OpenBOR/Paks/RGA.pak" ]; then
         echo "Pak $PAK_FILE already downloaded"
     else
-        curl -LOk http://www.zvitor.com.br/Downloads/RGAv103.rar
-        unrar e RGAv103.rar i "*RGA.pak"
-        mv RGA.pak /shared/OpenBOR/Paks
-        rm RGAv103.rar
+        mkdir -p /shared/OpenBOR/Paks
+        curl --http1.1 -Lk https://www.dropbox.com/s/04w0u2pw5rh7khf/RGA2.pak?dl=1 -o /shared/OpenBOR/Paks/RGA.pak
     fi
 }
 

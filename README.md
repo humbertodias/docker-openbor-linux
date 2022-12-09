@@ -8,7 +8,7 @@
 # Build & Make
 
 ```
-make build
+DOCKER_DEFAULT_PLATFORM=linux/amd64 make build
 docker run -ti -v $(pwd)/shared:/shared openbor-linux
 ```
 
