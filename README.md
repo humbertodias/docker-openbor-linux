@@ -9,7 +9,7 @@
 
 ```
 DOCKER_DEFAULT_PLATFORM=linux/amd64 make build
-docker run -ti -v $(pwd)/shared:/shared openbor-linux
+docker run -ti -u $(id -u):$(id -g) -v $(pwd)/shared:/home/openbor/shared openbor-linux
 ```
 
 ELF Generated file
@@ -26,7 +26,7 @@ shared/OpenBOR/OpenBOR: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), 
 # Download Demo
 
 ```
-docker run -ti -v $(pwd)/shared:/shared openbor-linux
+docker run -ti -v $(pwd)/shared:/home/openbor/shared openbor-linux
 download-demo
 exit
 ```
