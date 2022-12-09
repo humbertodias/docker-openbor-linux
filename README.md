@@ -9,7 +9,7 @@
 
 ```
 DOCKER_DEFAULT_PLATFORM=linux/amd64 make build
-docker run -ti -u $(id -u):$(id -g) -v $(pwd)/shared:/home/openbor/shared openbor-linux
+docker run -ti -v $(pwd)/shared:/home/openbor/shared openbor-linux
 ```
 
 ELF Generated file

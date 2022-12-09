@@ -1,6 +1,6 @@
 function openbor-copy(){
     cp -r $HOME/OpenBOR/LINUX/OpenBOR $HOME/shared
-    chmod +x $HOME/shared/OpenBOR/OpenBOR
+    chmod +x $HOME/shared/OpenBOR/OpenBOR*
     echo "Check Out the folder shared/OpenBOR"
 }
 
